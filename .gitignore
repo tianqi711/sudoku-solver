@@ -1,0 +1,10 @@
+.DS_Store
+/build/
+/cmake-build-*/
+*.o
+*.out
+*.dSYM/
+/main
+/sudoku_solver
+/ASComputerScience
+/sudoku-exchange-puzzle-bank/
