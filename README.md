@@ -57,3 +57,22 @@ clang++ -std=c++14 -O2 -Wall -Wextra -isystem /Library/Developer/CommandLineTool
 The output lists the records read, puzzles attempted, puzzles solved,
 puzzles stalled, malformed records, and percentage solved. The main program
 currently prints totals rather than each individual solved board.
+
+## Current status
+
+The solver reads the included dataset, calculates candidates, fills singleton
+cells, and reports totals. A test of the included `easy.txt` produced:
+
+```text
+Lines read: 100000
+Attempted: 100000
+Solved: 56970
+Stalled: 43030
+Malformed: 0
+Percent solved: 56.97%
+```
+
+The remaining 43,030 puzzles stalled under the singleton-only method; this
+does not mean they have no solution. Additional solving techniques and
+validation of conflicting starting clues remain unfinished. A future
+improvement is to display individual boards alongside the summary.
